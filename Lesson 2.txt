@@ -1,0 +1,9 @@
+git init: to create a git repository
+.git is created which stores all information
+
+git status: gives status of the git repository
+
+When git is initialized, no commit operations are performed as commit operations can only be performed by the user.
+
+Q1)What happens when you initialize a repository? Why do you need to do it?
+Ans: A git repositor and .git file is created.
