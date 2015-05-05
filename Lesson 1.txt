@@ -1,0 +1,49 @@
+Git: Version Control
+Git Hub: Collaboration
+
+Difference between files: 
+	a) Windows: FC <first file> <second file>
+	b) Mac and linux: diff <first file> <second file> (displays '-' for lines missing in the 1st file and '+' for lines 	added in 2nd file)
+	c) Git: git diff <1> <2>
+
+Make one commint per one logical change.
+
+git log 
+git checkout <commit id>
+git diff <commit id1> <commit id2>
+
+In cmd/git bash to allow quick copy: Right click -> Properties -> Options -> Check enable Quick copy
+
+Setting up workspace for Windows!!!!
+
+Sublime text editor!!
+
+
+Repository: All the files of the project. When you commit, 
+
+Q1) How did viewing a diff between two versions of a file help you see the bug that was introduced?
+Ans: Could easily loacte which line of code was changed.
+
+Q2) How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+Ans: Know what changes have been introduced and also not break anything which was working correctly earlier.
+
+Q3) What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+Ans: Pros
+	a) You know when a major change has gone in and which is critical to be saved.
+	b) Storage efficiency.
+	c) All the versions are compilable and logical.
+    Cons
+	a) Might take the wrong judgement.
+	b) External factors such as power cuts.
+
+Q4) Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+Ans: Because huge projects have many inter-related files
+
+Q5) How can you use the commands git log and git diff to view the history of files?
+Ans: use git log command to view all the commits made to a file and the use the git diff command to view the changes made between 2 commit operations
+
+Q6) How might using version control make you more confident to make changes that could break something?
+Ans: I know I can revert back to a previous version which didn't have the bug and also know the changes which caused the bug.
+
+Q7) Now that you have your workspace set up, what do you want to try using Git for?
+Ans: For now i want to learn it and use it for the Android App and Website which i am going to build.
