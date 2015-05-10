@@ -1,0 +1,17 @@
+Git can push and pull code to the GitHub. You push a branch, then all its reachable commits are sent. The ones that are already sent are not sent again.The new branch on github is also called by the same branch name.
+
+On GitHub, create a new repository, copy the url and add the remote host to git.
+
+git remote: shows all the remote hosts added
+
+git remote add <name> <url>: adds that remote
+
+git push <remote name> <branch> : push a branch to the remote
+
+git pull <remote name> <branch> : pull a branch from the remote
+
+Q1) When would you want to create a remote repository rather than keeping all your work local?
+Ans: When I want to collaborate with others; when I want to share it with others (open source projects).
+
+Q2) Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+Ans: This gives me control on what I want to share and what I don't want to and also not share before it is even ready to share.
