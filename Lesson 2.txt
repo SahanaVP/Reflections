@@ -5,5 +5,68 @@ git status: gives status of the git repository
 
 When git is initialized, no commit operations are performed as commit operations can only be performed by the user.
 
-Q1)What happens when you initialize a repository? Why do you need to do it?
+git add <file name>: Adds the file you want to track in the staging area and then when you commit it is stored in the repository.
+
+Write git comments like a commands.
+
+Working directory is the one which contains the actual files (folders on comp).
+
+git diff: difference between the files presnt in working directory and staging area
+
+git diff --staged: diff b/w staging area and most recent commit
+
+When you make some changes to your file, use git diff to find what changes have you made since you last committed as staging area will have the code after the most recent commit (if you haven't added the file yet that is).
+
+After adding file, working directory and staging area code becomes same and git diff --staged canbe used to find diff b/w last committed code.
+
+git reset --hard: deletes any changes made after the prev commit. This can't be undone as nothing has been stored via commit operation.
+
+git branch: will list all the branches present. The * branch is the present branch.
+
+git branch <branch name> : creates a new branch
+
+Reachability: git log displays all the commits in that branch and its parent branch.
+Eg: git log on e brach will give e,d,c,b,a; on f: f,c,b,c. h is not reachable from e/f.
+
+		 - d - e		
+	a - b - c - f 
+		 - g - h
+
+When you checkout a commit, the head now points to theat commit and any further commits to that will not be reachable by the master or other branches.
+
+git checkout -b <new branch name: creates a new brach and checks that branch. It is a combination of 2 commands : git branch <new_branch name> ; git checkout <new_branch_name>
+
+git merge <branch1> <branch2> : merges 1 & 2 to the the current branch and adjusts the pointer to the new commit. All the previous commits belonging to bothe branches are combined and sorted according to timestamp.
+
+If there is a conflict, then git branch --abort.
+
+git branch -d <name>: To delete a branch, only the label is deleted, all the coomits still are present.
+
+
+git show <commit id> : shows the changes made by that commit incomparison to its parent.
+
+git log -n <number> : shows that many logs.
+
+If there is a conflict while merging, open that file, resovle conflicts, delete the additional lines added by git, save it and the commit the changes.
+
+Q1) What happens when you initialize a repository? Why do you need to do it?
 Ans: A git repositor and .git file is created.
+
+Q2) How is the staging area different from the working directory and the repository? What value do you think it offers?
+Ans: Staging area is like a buffer area where the files which have to be logged is tracked. It is helpful in tracking which files have undergone a change since last commit operation.
+
+Q3) How can you use the staging area to make sure you have one commit per logical change?
+Ans: You can only add those files you are modifying as part of that logical change in the staging area and then commit.
+
+Q4) What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Ans: To keep history updated, branching can help know when are what changes were made. When I want to try a new code but don't want to break anything, try different versions and alternate code.
+
+Q5) How do the diagrams help you visualize the branch structure?
+Ans: Helped understand reachability better.
+
+Q6) What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Ans: Both the code combine. For easy understanding and because the commits committed to the subsequent branches are not visible to the main branch.
+
+Q7) What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Ans: Pros: Less time consuming; no errors added while merging
+     Cons: Might think it is a conflict even if it is not.
